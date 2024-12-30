@@ -9,7 +9,6 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styles.css" />
-   
   </head>
   <body>
     <div id="app">
@@ -19,6 +18,15 @@
       </aside>
       <main id="mainID">
         <div id="editorWrapper">
+          <input type="file" id="imageFileInput" value="Add image" />
+          <input
+            type="file"
+            id="imageFileInput"
+            style="display: none"
+            accept="image/*"
+          />
+          <button id="saveBtn">Save</button>
+
           <div id="greeting">
             Good Morning, User! Time to Journal for today! :D
           </div>

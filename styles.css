@@ -115,6 +115,11 @@ body {
   background-color: white;
 }
 
+.dark-mode #dropdown {
+  background: #222;
+  color: white;
+}
+
 #formatOptions,
 #dropdown {
   display: none;
@@ -123,7 +128,7 @@ body {
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
   z-index: 10;
 }
 
@@ -139,6 +144,11 @@ body {
 
 #dropdown {
   z-index: 11;
+  background-color: white;
+}
+
+#dropdown button {
+  background-color: white;
 }
 
 /* Theme Toggle Switch */
@@ -155,7 +165,7 @@ body {
 }
 
 .dark-mode #formatOptions,
-#dropdown {
+.dark-mode #dropdown {
   background-color: #222;
   color: white;
 }
@@ -239,4 +249,68 @@ body {
     width: 100%;
     padding: 10px;
   }
+}
+
+diary-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.diary-line::before {
+  content: "__________";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  color: transparent;
+  border-bottom: 1px dashed #000;
+  width: 35%;
+  pointer-events: none; /* Makes sure the dashed line doesn't block typing */
+}
+
+.diary-line input {
+  background: none;
+  border: none;
+  width: 35%;
+  text-align: start;
+  line-height: 0.2em;
+  padding: 0;
+  font-size: 16px;
+  outline: none;
+  position: absolute;
+  top: 60px;
+}
+
+.dark-mode .diary-line::before {
+  border-bottom: 1px dashed #fff;
+}
+
+.dark-mode .diary-line input {
+  color: white;
+}
+
+#toolbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-radius: 5px 5px 0 0;
+}
+
+#toolbar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#toolbar button:hover {
+  color: #ff8c00;
 }
