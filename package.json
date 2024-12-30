@@ -10,7 +10,8 @@
   "author": "Armaan",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^33.2.1"
+    "electron": "^33.2.1",
+    "electron-packager": "^17.1.2"
   },
   "dependencies": {
     "electron-prompt": "^1.7.0"
