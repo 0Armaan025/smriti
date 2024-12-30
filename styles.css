@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#sidebar h3 {
+  font-family: "Poppins";
+}
+
+#app {
+  display: flex;
+}
+
+#sidebar {
+  width: 250px;
+  height: 90vh;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+main {
+  padding: 20px;
+  flex-grow: 1;
+  background-color: #fff;
+}
+
+#editor {
+  padding: 20px;
+  min-height: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  height: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-radius: 5px;
+}
+
+#formatOptions {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+#headingSelect {
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Media Queries for Responsive Layout */
+@media (max-width: 768px) {
+  #app {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  transition: background-color 0.3s;
+}
+
+#sidebar {
+  width: 250px;
+  height: 110vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+#editorWrapper {
+  position: relative;
+  flex-grow: 1;
+  height: 100vh;
+}
+
+#editor {
+  padding: 20px;
+  min-height: 90vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: white;
+}
+
+#formatOptions,
+#dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+#dropdown button,
+#formatOptions button {
+  padding: 5px;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+#dropdown {
+  z-index: 11;
+}
+
+/* Theme Toggle Switch */
+#themeToggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode #formatOptions,
+#dropdown {
+  background-color: #222;
+  color: white;
+}
+
+.dark-mode #sidebar {
+  background-color: #444;
+  color: white;
+}
+
+.dark-mode #editor {
+  background-color: #444;
+  color: white;
+}
+
+.dark-mode #formatOptions,
+.dark-mode #dropdown {
+  background-color: #c0bfbf;
+  color: white;
+}
+
+.dark-mode #editorWrapper {
+  background-color: #222;
+  color: white;
+}
+
+.dark-mode #greeting {
+  background-color: #222;
+  color: white;
+}
+
+/* Modal for Name Entry */
+#nameModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#nameModalContent {
+  background: white;
+  padding: 30px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.dark-mode #mainID {
+  background-color: #222;
+  color: white;
+  height: 110vh;
+}
+
+#nameModal button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#greeting {
+  font-family: "Poppins";
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Media Queries for Responsive Layout */
+@media (max-width: 768px) {
+  #app {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diary Journal App</title>
+    <script
+      src="https://kit.fontawesome.com/f56cdb90b4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+   
+  </head>
+  <body>
+    <div id="app">
+      <aside id="sidebar">
+        <h3>Recent Diaries</h3>
+        <ul id="recent-diaries"></ul>
+      </aside>
+      <main id="mainID">
+        <div id="editorWrapper">
+          <div id="greeting">
+            Good Morning, User! Time to Journal for today! :D
+          </div>
+          <div
+            id="editor"
+            contenteditable="true"
+            placeholder="Start writing..."
+          ></div>
+          <div id="formatOptions">
+            <button id="bold"><b>B</b></button>
+            <button id="italic"><i>I</i></button>
+            <button id="underline"><u>U</u></button>
+            <button id="dropdownButton">Headings</button>
+          </div>
+          <div id="dropdown">
+            <button id="h1">H1</button>
+            <button id="h2">H2</button>
+            <button id="h3">H3</button>
+            <button id="h4">H4</button>
+            <button id="h5">H5</button>
+            <button id="h6">H6</button>
+          </div>
+          <div id="themeToggle">🌙</div>
+        </div>
+      </main>
+    </div>
+
+    <div id="nameModal">
+      <div id="nameModalContent">
+        <h2>What's your name?</h2>
+        <input type="text" id="usernameInput" placeholder="Enter your name" />
+        <button id="submitName">Submit</button>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
